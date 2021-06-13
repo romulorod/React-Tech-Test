@@ -1,39 +1,28 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { render } from 'react-dom'
-
 
 function Card() {
 
-    async function ApiData() {
+    const toArray = []
+    const [pokemonData, setPokemonData] = useState([])
 
-        const toArray = []
+    const api = () => {
+        const url = `https://pokeapi.co/api/v2/pokemon/1`
+        const res = axios.get(url)
+        toArray.push(res.data)
+        setPokemonData(toArray)
+    }
+    api()
+    return (
 
-        const [pokemon, setPokemon] = useState('' || 0)
-        const [pokemonData, setPokemonData] = useState([])
-        const [pokemonType, setPokemonType] = useState("")
+            pokemonData.map((data) => {
+                return (
+                    <section>{data.Form}</section>
+                )
 
-        try {
-            const url = `https://pokeapi.co/api/v2/pokemon/${9}`
-            const res = await axios.get(url)
-            toArray.push(res.data)
-            setPokemonType(res.data.types[0].type.name)
-            setPokemonData(toArray)
-        } catch (e) {
-            console.log(e)
+
         }
-
-
-
-        pokemonData.map((data) => {
-            return (
-                <div>
-                    <img src={data.sprites['front_default']} />
-                </div>
-            )
-        })
-} ApiData()
+        )
+    )
 }
-
-
 export default Card
