@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './App.css'
-import SelectOrigem from './SelectOrigem'
-import SelectDestino from './SelectDestino'
-import MinutosPorMes from './MinutosPorMes'
-import PlanoFaleMais from './PlanoFaleMais'
+import SelectOrigem from './Components/Select/SelectOrigem'
+import SelectDestino from './Components/Select/SelectDestino'
+import MinutosPorMes from './Components/MinutosPorMes/MinutosPorMes'
+import PlanoFaleMais from './Components/PlanoFaleMais/PlanoFaleMais'
 import { useEffect } from 'react'
 
 const App = () => {
