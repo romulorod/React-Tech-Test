@@ -5,6 +5,7 @@ import SelectDestino from './Components/Select/SelectDestino'
 import MinutosPorMes from './Components/MinutosPorMes/MinutosPorMes'
 import PlanoFaleMais from './Components/PlanoFaleMais/PlanoFaleMais'
 import { useEffect } from 'react'
+import Background from './Components/Background'
 
 
 const App = () => {
@@ -83,6 +84,7 @@ useEffect (() => {
 
   return (
     <>
+    <Background />
       <SelectOrigem o={updateOrigem} origem={origem} />
       <SelectDestino d={updateDestino} destino={destino} dddOrigem={origem}/>
      <PlanoFaleMais plano={updatePlanoEscolhido} planoEscolhido={planoEscolhido} />

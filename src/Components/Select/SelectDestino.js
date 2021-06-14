@@ -1,12 +1,12 @@
 import React from 'react'
-import {Select} from './styles'
+
 
 const SelectDestino = ({ d, destino, dddOrigem}) => {
 
     return (
         <form>
             <label htmlFor='dddDestino'>Escolha o DDD de destino: </label>
-            <Select id='destinoDDD' name="ddddestino" value={destino} onChange={d}>
+            <select id='destinoDDD' name="ddddestino" value={destino} onChange={d}>
                 <option defaultValue value />
                 {
                 dddOrigem === '011' && <>
@@ -25,7 +25,7 @@ const SelectDestino = ({ d, destino, dddOrigem}) => {
                 {dddOrigem === '018' && <>
                     <option id="destino011" hidden="" value='011' >011</option> </>
                 }
-            </Select>
+            </select>
         </form>
     )
 }
