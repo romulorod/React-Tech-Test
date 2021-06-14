@@ -6,6 +6,7 @@ import MinutosPorMes from './Components/MinutosPorMes/MinutosPorMes'
 import PlanoFaleMais from './Components/PlanoFaleMais/PlanoFaleMais'
 import { useEffect } from 'react'
 
+
 const App = () => {
   const [price, setPrice] = useState(0)
   const [minutos, setMinutos] = useState(0)
@@ -87,8 +88,8 @@ useEffect (() => {
      <PlanoFaleMais plano={updatePlanoEscolhido} planoEscolhido={planoEscolhido} />
      <MinutosPorMes f={updateMinutos} />
       <div id="resultado">
-      <p> O valor por mês com o plano escolhido seria:{price} </p>
-      <p>O valor sem nosso maravilhoso plano: {precoSemPlano}</p>
+      <p> Com o plano escolhido, por mês:{price} </p>
+      <p>Valor sem nosso maravilhoso plano: {precoSemPlano}</p>
       </div>
     </>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Input} from './styles'
 
 const MinutosPorMes = ({ f }) => {
 
@@ -6,7 +7,7 @@ const MinutosPorMes = ({ f }) => {
         <div>
             Quantos minutos você utiliza por mês ? 
             <label>
-                <input type="text" onChange={f} className="minutosMes" />
+                <Input type="text" onChange={f} className="minutosMes" />
             </label>
         </div>
     )
