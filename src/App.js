@@ -5,17 +5,16 @@ import SelectDestino from './Components/Select/SelectDestino'
 import MinutosPorMes from './Components/MinutosPorMes/MinutosPorMes'
 import PlanoFaleMais from './Components/PlanoFaleMais/PlanoFaleMais'
 import { useEffect } from 'react'
-import Background from './Components/Background'
 
 
 const App = () => {
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState((0).toFixed(2))
   const [minutos, setMinutos] = useState(0)
   const [origem, setOrigem] = useState('')
   const [destino, setDestino] = useState('')
   const [planoEscolhido, setPlanoEscolhido] = useState('')
   const [valorMin, setValorMin] = useState(0)
-  const [precoSemPlano, setPrecoSemPlano] = useState(0)
+  const [precoSemPlano, setPrecoSemPlano] = useState((0).toFixed(2))
   function updateOrigem(e) {
     setOrigem(e.target.value)
   }
@@ -47,7 +46,6 @@ const App = () => {
 
   function updatePlanoEscolhido(e) {
     setPlanoEscolhido(e.target.value)
-    
   }
 
   function updateMinutos(e) {
@@ -56,23 +54,25 @@ const App = () => {
 
 useEffect (() => {
   if(planoEscolhido==='') return
-
-  if(planoEscolhido==='FaleMais30' && minutos <=30){
-    setPrice(0) 
+  if(planoEscolhido==='FaleMais 30' || planoEscolhido==='FaleMais 60' || planoEscolhido==='FaleMais 120'){
+    setPrice(parseFloat(0).toFixed(2)) 
   }
-  if(planoEscolhido==='FaleMais30' && minutos >30){
+  if(planoEscolhido==='FaleMais 30' && minutos <=30){
+    setPrice(parseFloat(0).toFixed(2))  
+  }
+  if(planoEscolhido==='FaleMais 30' && minutos >30){
     setPrice(parseFloat(((minutos-30)*valorMin*1.1).toFixed(2))) 
   }
-  if(planoEscolhido==='FaleMais60' && minutos <=60){
-    setPrice(0) 
+  if(planoEscolhido==='FaleMais 60' && minutos <=60){
+    setPrice(parseFloat(0).toFixed(2)) 
   }
-  if(planoEscolhido==='FaleMais60' && minutos >60){
+  if(planoEscolhido==='FaleMais 60' && minutos >60){
     setPrice(parseFloat(((minutos-60)*valorMin*1.1).toFixed(2))) 
   }
-  if(planoEscolhido==='FaleMais120' && minutos <=120){
-    setPrice(0) 
+  if(planoEscolhido==='FaleMais 120' && minutos <=120){
+    setPrice(parseFloat(0).toFixed(2)) 
   }
-  if(planoEscolhido==='FaleMais120' && minutos >120){
+  if(planoEscolhido==='FaleMais 120' && minutos >120){
     setPrice(parseFloat(((minutos-120)*valorMin*1.1).toFixed(2))) 
   }
   if(minutos ==='0'){
@@ -84,14 +84,17 @@ useEffect (() => {
 
   return (
     <>
-    <Background />
+    <div className="form-div">
       <SelectOrigem o={updateOrigem} origem={origem} />
       <SelectDestino d={updateDestino} destino={destino} dddOrigem={origem}/>
+      </div>
+      <div className="plano-minutos">
      <PlanoFaleMais plano={updatePlanoEscolhido} planoEscolhido={planoEscolhido} />
      <MinutosPorMes f={updateMinutos} />
+     </div>
       <div id="resultado">
-      <p> Com o plano escolhido, por mês:{price} </p>
-      <p>Valor sem nosso maravilhoso plano: {precoSemPlano}</p>
+      <div className="preco-com-plano"> Com o plano escolhido, por mês:<p><br />{price}</p></div> 
+      <div className="preco-sem-plano">Valor sem nosso maravilhoso plano: <p><br />{precoSemPlano}</p></div>
       </div>
     </>
   )

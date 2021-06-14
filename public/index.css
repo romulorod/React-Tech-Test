@@ -1,0 +1,80 @@
+:root{
+    --textSize: 24px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+}
+
+.form-div{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+    font-size: var(--textSize);
+} /*
+#origemDDD{
+    position:absolute;
+    top:4%;
+    left:28%;
+}
+#destinoDDD{
+    position:absolute;
+    top:4%;
+    left:68%;
+}
+*/
+.plano-minutos{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top:35%;
+}
+
+#resultado{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top:50%;
+    font-size: var(--textSize);
+}
+
+.preco-com-plano{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--textSize);
+    color:green;
+}
+.preco-sem-plano{
+    display: block;
+    font-size: var(--textSize);
+    color:red;
+}
+.preco-sem-plano p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preco-com-plano p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media  (max-width:320px) {
+    body{
+        background-color: lightcyan;
+    }
+}

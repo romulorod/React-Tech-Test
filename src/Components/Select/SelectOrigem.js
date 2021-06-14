@@ -3,6 +3,7 @@ import React from 'react'
     const SelectOrigem = ({ o,origem }) => {
 
         return (
+            <div className="origem">
             <form>
                 <label htmlFor='dddOrigem'>Escolha o DDD de origem: </label>
                 <select id='origemDDD' name="dddO" value={origem} onChange={o}>
@@ -13,6 +14,7 @@ import React from 'react'
                     <option id="origem018" value="018">018</option>
                 </select>
             </form>
+            </div>
         )
 
     }
