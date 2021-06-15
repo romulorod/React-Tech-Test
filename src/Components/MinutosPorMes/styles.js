@@ -13,7 +13,7 @@ width:40%;
 `
 
 export const MinutosMes = styled.div`
-font-size: 24px;
+font-size: 20px;
     label{
         display:block;
         justify-content: center;

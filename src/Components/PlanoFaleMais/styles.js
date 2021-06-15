@@ -11,7 +11,7 @@ margin-top:2%;
 font-size:20px;
 `
 export const PlanosDiv = styled.div`
-font-size:24px;
+font-size:20px;
 display:block;
 
 `
