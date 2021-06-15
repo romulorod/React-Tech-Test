@@ -18,7 +18,7 @@ const FirstPage = () => {
                     <MainContent>
                         <img src={WomanOnPhone} width="200" height="200" alt="Woman-on-Phone"/>
 
-                        <div> Bem vindos a Telzir!<br /> somos especializados em chamadas de longa distância nacional!</div></MainContent>
+                        <Title> Bem vindos a Telzir!<br /> somos especializados em chamadas de longa distância nacional!</Title></MainContent>
                     <P>Esta é uma página para divulgar nosso lançamento, o plano FaleMais ♥ </P>
                     <Title>Com nossos novos planos, você pode falar de graça com seus contatos, dentro dos limites do plano. Já pensou ?
                         E se passar dos limites, só cobramos os minutos com um acréscimo de 10%. É ou não é Telzacional ?

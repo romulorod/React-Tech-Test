@@ -22,7 +22,7 @@ margin:0 auto;
 export const P = styled.p`
 font-size: 24px;
 text-align: center;
-margin-top: 0%;
+margin-top: 5%;
 margin-bottom: 3%;
 `
 export const Section = styled.section`
@@ -35,6 +35,34 @@ margin:3% auto;
 export const Main = styled.main`
 background-color: lightsteelblue;
 color:black;
+@media (max-width:520px){
+    Main,p,section,div{
+        font-size:20px;
+    }
+    p{
+        width:95%;
+    }
+    img{
+        margin-left: 2%;
+        width:150px;
+        height:150px;
+    }
+}
+@media (max-width:320px){
+    Main,p,section,div{
+        font-size:14px;
+        display:block;
+        margin:0 auto;
+    }
+    div,section{
+        margin-top: 9%;
+    }
+    img{
+        display:block;
+        height:100px;
+        margin:5% 25%;
+    }
+}
 `
 
 export const Button = styled.button`
@@ -47,4 +75,7 @@ margin: 0 auto;
 a{
 text-decoration: none;
 color:white;
+
+
 }`
+
