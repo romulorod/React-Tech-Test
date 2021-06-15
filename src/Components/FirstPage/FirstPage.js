@@ -26,8 +26,9 @@ const FirstPage = () => {
                     <Section> E aí ? Quer fazer a melhor simulação da sua vida, hoje ? Clica no botão abaixo e seja redirecionado para
                         a página da simulação, sem atualizar a sua página, com o poder do Router ;)
                     </Section>
-                    </Main>
                     <Button><Link to='/simulacao'>Clique Aqui!</Link></Button>
+                    </Main>
+                    
                     </Route>
                     <Switch> 
                         <Route exact path="/simulacao" component={App} />

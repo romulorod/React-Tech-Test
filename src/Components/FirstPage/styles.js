@@ -35,6 +35,33 @@ margin:3% auto;
 export const Main = styled.main`
 background-color: lightsteelblue;
 color:black;
+@media (max-width:1440px){
+    Main,p,section,div{
+        display:block;
+        margin:0 auto;
+    }
+    div,section{
+        margin-top: 3%;
+    }
+    img{
+        display:block;
+        height:100px;
+        margin:2% 42%;
+    }
+    button{
+        margin-top: 3%;
+    }
+}
+@media (max-width:1024px){
+    img{
+        margin: 2% 40%;
+    }
+}
+@media (max-width:768px){
+    img{
+        margin:2% 35%;
+    }
+}
 @media (max-width:520px){
     Main,p,section,div{
         font-size:20px;
@@ -43,9 +70,14 @@ color:black;
         width:95%;
     }
     img{
-        margin-left: 2%;
-        width:150px;
-        height:150px;
+        margin: 2% 40%;
+        width:120px;
+        height:120px;
+    }
+}
+@media (max-width:426px){
+    img{
+        margin:2% 36%;
     }
 }
 @media (max-width:320px){
@@ -60,7 +92,7 @@ color:black;
     img{
         display:block;
         height:100px;
-        margin:5% 25%;
+        margin:5% 30%;
     }
 }
 `
