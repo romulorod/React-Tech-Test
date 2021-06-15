@@ -24,6 +24,7 @@ const App = () => {
   }
 
   useEffect(() => {
+    if(destino === '')return
     if (destino === '016') {
       setValorMin(1.9)
     }

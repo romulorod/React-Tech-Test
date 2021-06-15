@@ -35,6 +35,34 @@ margin:3% auto;
 export const Main = styled.main`
 background-color: lightsteelblue;
 color:black;
+@media (max-width:2560px){
+    Main,p,section,div{
+        display:block;
+        margin:0 auto;
+        font-size:60px;
+    }
+    div,section{
+        margin-top: 3%;
+    }
+    img{
+        display:block;
+        height:500px;
+        width: 500px;
+        margin:1% 42%;
+    }
+    button{
+        font-size: 60px;
+        width:400px;
+        height:100px;
+        margin-top: 3%;
+        a{
+            height:100%;
+            width:100%;
+            text-align:center;
+        }
+    }
+}
+
 @media (max-width:1440px){
     Main,p,section,div{
         display:block;
