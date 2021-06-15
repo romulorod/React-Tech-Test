@@ -1,10 +1,10 @@
 import { render,screen } from "@testing-library/react";
 import React from 'react'
-import FirstPage from "./FirstPage";
+import Home from "./Home";
 
-describe('FirstPage Tests',() => {
+describe('Home Tests',() => {
     it("Should contain a button", () =>{
-        render(<FirstPage />)
+        render(<Home />)
         const BotaoComLink = screen.getByRole('button')
     
         expect(BotaoComLink).toBeInTheDocument()

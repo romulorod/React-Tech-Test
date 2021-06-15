@@ -107,7 +107,7 @@ body{
     margin-bottom: 10%;
 }
 }
-@media  (min-width:321px) and (max-width:600px){
+@media  (min-width:321px) and (max-width:460px){
     .form-div, .plano-minutos{
         display:block;
         width: 90%;
