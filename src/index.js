@@ -1,11 +1,12 @@
 import React from 'react';
-import App from './App';
 import ReactDOM from 'react-dom';
+import FirstPage from './Components/FirstPage/FirstPage';
+import {BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <FirstPage />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
