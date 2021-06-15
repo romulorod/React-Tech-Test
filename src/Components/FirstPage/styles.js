@@ -39,21 +39,21 @@ color:black;
     Main,p,section,div{
         display:block;
         margin:0 auto;
-        font-size:60px;
+        font-size:30px;
     }
     div,section{
         margin-top: 3%;
     }
     img{
         display:block;
-        height:500px;
-        width: 500px;
+        height:150px;
+        width: 150px;
         margin:1% 42%;
     }
     button{
-        font-size: 60px;
-        width:400px;
-        height:100px;
+        font-size: 30px;
+        width:300px;
+        height:50px;
         margin-top: 3%;
         a{
             height:100%;
