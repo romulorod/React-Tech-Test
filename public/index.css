@@ -73,7 +73,7 @@ body{
 
 
 
-@media  (max-width:320px) {
+@media  (max-width:320px){
 .form-div, .plano-minutos{
     display:block;
     width: 90%;
@@ -95,6 +95,7 @@ body{
 }
 .plano-minutos select{
     margin-bottom: 5%;
+    margin-left: 25%;
 }
 #resultado{
     display:block;
@@ -105,5 +106,52 @@ body{
 #resultado p{
     margin-bottom: 10%;
 }
-
 }
+@media  (min-width:321px) and (max-width:600px){
+    .form-div, .plano-minutos{
+        display:block;
+        width: 90%;
+        text-align: center;
+        margin:10% auto;
+        }
+    
+    #origemDDD, #destinoDDD{
+        display:block;
+        margin: 2% 40%;
+        justify-content: center;
+        align-items: center;
+    }
+    .plano-minutos{
+        display:block;
+        margin: 5% 5%;
+        margin-top: -10%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .plano-minutos select{
+        margin-left: 25%;
+        margin-bottom: 5%;
+    }
+    #resultado{
+        display:block;
+        margin: 15% 5%;
+        width: 90%;
+        text-align: center;
+    }
+    #resultado p{
+        margin-bottom: 10%;
+    }
+    }
+    @media (min-width:420px){
+        .plano-minutos select{
+            margin-left: 30%;
+            margin-bottom: 5%;
+        }
+    }
+    @media (min-width:520px){
+        .plano-minutos select{
+            margin-left: 33%;
+            margin-bottom: 5%;
+        }
+    }
