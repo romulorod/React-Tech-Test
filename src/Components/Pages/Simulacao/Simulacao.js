@@ -5,6 +5,13 @@ import SelectDestino from "../../SelectDestino";
 import MinutosPorMes from "../../MinutosPorMes";
 import PlanoFaleMais from "../../PlanoFaleMais";
 import { useEffect } from "react";
+import { useLocation } from "react-router";
+
+export const LocationDisplay = () => {
+  const location = useLocation()
+
+  return <div data-testid="location-display" style={{opacity:0}}>{location.pathname}</div>
+}
 
 const Simulacao = () => {
   const [preco, setPreco] = useState((0).toFixed(2));
@@ -14,6 +21,7 @@ const Simulacao = () => {
   const [planoEscolhido, setPlanoEscolhido] = useState("");
   const [valorMin, setValorMin] = useState(0);
   const [precoSemPlano, setPrecoSemPlano] = useState((0).toFixed(2));
+
 
   function updateOrigem(e) {
     setOrigem(e.target.value);
@@ -116,6 +124,7 @@ const Simulacao = () => {
           </p>
         </div>
       </div>
+      <LocationDisplay />
     </>
   );
 };

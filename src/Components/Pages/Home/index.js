@@ -9,6 +9,7 @@ import { Button } from "./styles";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Simulacao from "../../Pages/Simulacao/Simulacao";
 
+
 const Home = () => {
   return (
     <BrowserRouter>
@@ -51,8 +52,9 @@ const Home = () => {
         </Main>
       </Route>
       <Switch>
-        <Route exact path="/simulacao" component={Simulacao} />
+        <Route  exact path="/simulacao" component={Simulacao} />
       </Switch>
+      
     </BrowserRouter>
   );
 };

@@ -6,11 +6,14 @@ import {
 import Home from "./Components/Pages/Home";
 const Routes = () => {
   return (
+    <>
     <Switch>
       <Route exact path="/">
         <Home />
       </Route>
     </Switch>
+    
+    </>
   )
 }
 export default Routes
