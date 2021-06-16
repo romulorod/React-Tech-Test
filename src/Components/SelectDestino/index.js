@@ -5,9 +5,9 @@ const SelectDestino = ({ destinyUpdateFn, destiny, originDDD}) => {
 
     return (
         <div className="destino">
-        <form>
+        <form data-testid="form" className="form">
             <label htmlFor='dddDestino'>Escolha o DDD de destino: </label>
-            <select id='destinoDDD' name="ddddestino" value={destiny} onChange={destinyUpdateFn}>
+            <select id='destinoDDD' name="ddddestino" data-testid="select" value={destiny} onChange={destinyUpdateFn}>
                 <option defaultValue value />
                 {
                 originDDD === '011' && <>
