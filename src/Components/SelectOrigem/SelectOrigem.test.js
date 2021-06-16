@@ -5,13 +5,13 @@ import SelectOrigem from ".";
 describe('SelectOrigem Form Tests', () => {
     it("Should contain a form", () => {
         render(<SelectOrigem />)
-        const Form = screen.getByTestId('form')
+        const Form = screen.getByTestId('form-origin')
 
-        expect(Form).toHaveClass('form')
+        expect(Form).toHaveClass('form-origin')
     })
     it("Should contain options", () => {
         render(<SelectOrigem />)
-        const Select = screen.getByTestId('select')
+        const Select = screen.getByTestId('select-origin')
 
         expect(Select).toHaveTextContent('011','016','017','018')
     })

@@ -5,13 +5,13 @@ import PlanoFaleMais from ".";
 describe('SelectOrigem Form Tests', () => {
     it("Should contain a form", () => {
         render(<PlanoFaleMais />)
-        const Label = screen.getByTestId('label')
+        const Label = screen.getByTestId('label-plano')
 
-        expect(Label).toHaveClass('label')
+        expect(Label).toHaveClass('label-plano')
     })
     it("Should contain options", () => {
         render(<PlanoFaleMais />)
-        const Select = screen.getByTestId('select')
+        const Select = screen.getByTestId('select-plano')
 
         expect(Select).toContainElement(Select)
     })
