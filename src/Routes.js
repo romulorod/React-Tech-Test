@@ -1,19 +1,24 @@
 import React from "react";
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
-import Home from "./Components/Pages/Home";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Simulacao from "./pages/Simulacao/";
+import NotFound from "./pages/NotFound";
+
 const Routes = () => {
   return (
-    <>
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-    </Switch>
-    
-    </>
-  )
-}
-export default Routes
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/simulacao">
+          <Simulacao />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route  path="/">
+          <NotFound />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};
+export default Routes;

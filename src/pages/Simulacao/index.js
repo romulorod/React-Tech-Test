@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "./Simulacao.css";
-import SelectOrigem from "../../SelectOrigem";
-import SelectDestino from "../../SelectDestino";
-import MinutosPorMes from "../../MinutosPorMes";
-import PlanoFaleMais from "../../PlanoFaleMais";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import SelectOrigem from "../../components/SelectOrigem";
+import SelectDestino from "../../components/SelectDestino";
+import MinutosPorMes from "../../components/MinutosPorMes";
+import PlanoFaleMais from "../../components/PlanoFaleMais";
+
+import "./styles.css";
 
 const Simulacao = () => {
   const [preco, setPreco] = useState((0).toFixed(2));
@@ -14,7 +14,6 @@ const Simulacao = () => {
   const [planoEscolhido, setPlanoEscolhido] = useState("");
   const [valorMin, setValorMin] = useState(0);
   const [precoSemPlano, setPrecoSemPlano] = useState((0).toFixed(2));
-
 
   function updateOrigem(e) {
     setOrigem(e.target.value);
@@ -94,14 +93,21 @@ const Simulacao = () => {
     <>
       <div className="form-div">
         <SelectOrigem originUpdateFn={updateOrigem} origin={origem} />
-        <SelectDestino destinyUpdateFn={updateDestino} destiny={destino} originDDD={origem} />
+        <SelectDestino
+          destinyUpdateFn={updateDestino}
+          destiny={destino}
+          originDDD={origem}
+        />
       </div>
       <div className="plano-minutos">
-        <PlanoFaleMais planUpdateFn={updatePlanoEscolhido} planoEscolhido={planoEscolhido} />
+        <PlanoFaleMais
+          planUpdateFn={updatePlanoEscolhido}
+          planoEscolhido={planoEscolhido}
+        />
         <MinutosPorMes minutesUpdateFn={updateMinutos} />
       </div>
       <div id="resultado">
-        <div className="preco-com-plano">
+        <div className="preco-com-plano" data-testid="preco-com-plano">
           {" "}
           Com o plano escolhido, por mês:
           <p>
@@ -109,7 +115,7 @@ const Simulacao = () => {
             {preco}
           </p>
         </div>
-        <div className="preco-sem-plano">
+        <div className="preco-sem-plano" data-testid="preco-sem-plano">
           Valor sem nosso maravilhoso plano:{" "}
           <p>
             <br />

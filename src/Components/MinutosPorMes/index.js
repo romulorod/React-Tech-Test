@@ -7,7 +7,7 @@ const MinutosPorMes = ({ minutesUpdateFn }) => {
     return (
         <MinutosMes>
             Quantos minutos você utiliza por mês ? 
-            <label>
+            <label data-testid="input-minutos-por-mes">
                 <Input type="text" onChange={minutesUpdateFn} className="minutosMes" />
             </label>
         </MinutosMes>

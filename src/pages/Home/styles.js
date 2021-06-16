@@ -73,14 +73,14 @@ export const Main = styled.main`
 @media(max-width:1920px){
   img {
       display: block;
-      height: 180px;
+      height: 150px;
       margin: 2% 44%;
     }
     Main,
     p,
     section,
     div {
-      font-size: 32px;
+      font-size: 30px;
     }
     button{
       width:250px;

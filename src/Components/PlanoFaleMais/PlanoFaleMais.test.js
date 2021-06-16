@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import React from 'react'
-import PlanoFaleMais from ".";
+import PlanoFaleMais from "./";
 
 describe('SelectOrigem Form Tests', () => {
     it("Should contain a form", () => {

@@ -17,18 +17,7 @@ body{
     align-items: center;
     margin-top: 10%;
     font-size: var(--textSize);
-} /*
-#origemDDD{
-    position:absolute;
-    top:4%;
-    left:28%;
 }
-#destinoDDD{
-    position:absolute;
-    top:4%;
-    left:68%;
-}
-*/
 .plano-minutos{
     display:flex;
     justify-content:space-evenly;
