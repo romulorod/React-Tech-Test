@@ -7,104 +7,112 @@ import PlanoFaleMais from "../../Components/PlanoFaleMais";
 import "./styles.css";
 
 const Simulacao = () => {
-  const [preco, setPreco] = useState((0).toFixed(2));
-  const [minutos, setMinutos] = useState(0);
-  const [origem, setOrigem] = useState("");
-  const [destino, setDestino] = useState("");
-  const [planoEscolhido, setPlanoEscolhido] = useState("");
-  const [valorMin, setValorMin] = useState(0);
-  const [precoSemPlano, setPrecoSemPlano] = useState((0).toFixed(2));
+  const [price, setPrice] = useState((0).toFixed(2));
+  const [minutes, setMinutes] = useState(0);
+  const [originDDD, setOriginDDD] = useState("");
+  const [destinyDDD, setDestinyDDD] = useState("");
+  const [chosenPlan, setChosenPlan] = useState("");
+  const [MinuteValue, setMinueValue] = useState(0);
+  const [originalPrice, setOriginalPrice] = useState((0).toFixed(2));
 
-  function updateOrigem(e) {
-    setOrigem(e.target.value);
+  function updateOrigin(e) {
+    setOriginDDD(e.target.value);
   }
 
-  function updateDestino(e) {
-    setDestino(e.target.value);
-  }
-
-  useEffect(() => {
-    // TODO: utilizar um switch case
-    if (destino === "") return;
-    if (destino === "016") {
-      setValorMin(1.9);
-    }
-    if (destino === "017") {
-      setValorMin(1.7);
-    }
-    if (destino === "018") {
-      setValorMin(0.9);
-    }
-    if (origem === "016") {
-      setValorMin(2.9);
-    }
-    if (origem === "017") {
-      setValorMin(2.7);
-    }
-    if (origem === "018") {
-      setValorMin(1.9);
-    }
-  }, [destino, origem]);
-
-  function updatePlanoEscolhido(e) {
-    setPlanoEscolhido(e.target.value);
-  }
-
-  function updateMinutos(e) {
-    setMinutos(e.target.value);
+  function updateDestiny(e) {
+    setDestinyDDD(e.target.value);
   }
 
   useEffect(() => {
-    if (planoEscolhido === "") return;
-    if (minutos === "0") {
+    switch(destinyDDD){
+      case '':
+        setPrice(0)
+      break
+      case '016':
+      setMinueValue(1.9);
+      break
+      case '017':
+      setMinueValue(1.7);
+      break
+      case '018':
+      setMinueValue(0.9);
+      break
+    }
+      switch(originDDD){
+        case '':
+        setPrice(0)
+        break
+        case '016':
+        setMinueValue(2.9);
+        break
+        case '017':
+        setMinueValue(2.7);
+        break
+        case '018':
+        setMinueValue(1.9);
+        break
+    }
+  }, [destinyDDD, originDDD]);
+
+  function updateChosenPlan(e) {
+    setChosenPlan(e.target.value);
+  }
+
+  function updateMinutes(e) {
+    setMinutes(e.target.value);
+  }
+
+  useEffect(() => {
+    if (chosenPlan === "") return;
+    if (minutes === "0") {
       return;
     }
     // TODO: melhorar essa lógica aqui. mais tarde vejo com calma
     if (
-      planoEscolhido === "FaleMais 30" ||
-      planoEscolhido === "FaleMais 60" ||
-      planoEscolhido === "FaleMais 120"
+      chosenPlan === "FaleMais 30" ||
+      chosenPlan === "FaleMais 60" ||
+      chosenPlan === "FaleMais 120"
     ) {
-      setPreco(parseFloat(0).toFixed(2));
+      setPrice(parseFloat(0).toFixed(2));
     }
-    if (planoEscolhido === "FaleMais 30" && minutos <= 30) {
-      setPreco(parseFloat(0).toFixed(2));
+    if (chosenPlan === "FaleMais 30" && minutes <= 30) {
+      setPrice(parseFloat(0).toFixed(2));
     }
-    if (planoEscolhido === "FaleMais 30" && minutos > 30) {
-      setPreco(parseFloat(((minutos - 30) * valorMin * 1.1).toFixed(2)));
+    if (chosenPlan === "FaleMais 30" && minutes > 30) {
+      setPrice(parseFloat(((minutes - 30) * MinuteValue * 1.1).toFixed(2)));
     }
-    if (planoEscolhido === "FaleMais 60" && minutos <= 60) {
-      setPreco(parseFloat(0).toFixed(2));
+    if (chosenPlan === "FaleMais 60" && minutes <= 60) {
+      setPrice(parseFloat(0).toFixed(2));
     }
-    if (planoEscolhido === "FaleMais 60" && minutos > 60) {
-      setPreco(parseFloat(((minutos - 60) * valorMin * 1.1).toFixed(2)));
+    if (chosenPlan === "FaleMais 60" && minutes > 60) {
+      setPrice(parseFloat(((minutes - 60) * MinuteValue * 1.1).toFixed(2)));
     }
-    if (planoEscolhido === "FaleMais 120" && minutos <= 120) {
-      setPreco(parseFloat(0).toFixed(2));
+    if (chosenPlan === "FaleMais 120" && minutes <= 120) {
+      setPrice(parseFloat(0).toFixed(2));
     }
-    if (planoEscolhido === "FaleMais 120" && minutos > 120) {
-      setPreco(parseFloat(((minutos - 120) * valorMin * 1.1).toFixed(2)));
+    if (chosenPlan === "FaleMais 120" && minutes > 120) {
+      setPrice(parseFloat(((minutes - 120) * MinuteValue * 1.1).toFixed(2)));
     } else {
-      setPrecoSemPlano((minutos * valorMin).toFixed(2));
+      setOriginalPrice((minutes * MinuteValue).toFixed(2));
     }
-  }, [planoEscolhido, minutos, valorMin]);
+  }, [chosenPlan, minutes, MinuteValue]);
 
   return (
     <>
       <div className="form-div">
-        <SelectOrigem originUpdateFn={updateOrigem} origin={origem} />
+        <SelectOrigem originUpdateFn={updateOrigin} origin={originDDD} />
         <SelectDestino
-          destinyUpdateFn={updateDestino}
-          destiny={destino}
-          originDDD={origem}
+          destinyUpdateFn={updateDestiny}
+          destiny={destinyDDD}
+          originDDD={originDDD}
         />
       </div>
       <div className="plano-minutos">
         <PlanoFaleMais
-          planUpdateFn={updatePlanoEscolhido}
-          planoEscolhido={planoEscolhido}
+          planUpdateFn={updateChosenPlan}
+          chosenPlan={chosenPlan}
         />
-        <MinutosPorMes minutesUpdateFn={updateMinutos} />
+        <MinutosPorMes minutesUpdateFn={updateMinutes} />
       </div>
       <div id="resultado">
         <div className="preco-com-plano" data-testid="preco-com-plano">
@@ -112,14 +120,14 @@ const Simulacao = () => {
           Com o plano escolhido, por mês:
           <p>
             <br />
-            {preco}
+            {price}
           </p>
         </div>
         <div className="preco-sem-plano" data-testid="preco-sem-plano">
           Valor sem nosso maravilhoso plano:{" "}
           <p>
             <br />
-            {precoSemPlano}
+            {originalPrice}
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaleMais } from "./styles";
 import { PlanosDiv } from "./styles";
-const PlanoFaleMais = ({ planUpdateFn, planoEscolhido }) => {
+const PlanoFaleMais = ({ planUpdateFn, planoEscolhido: updateChosenPlan }) => {
   return (
     <>
       <PlanosDiv>
@@ -10,7 +10,7 @@ const PlanoFaleMais = ({ planUpdateFn, planoEscolhido }) => {
         </label>
         <FaleMais
           data-testid="select-plano"
-          value={planoEscolhido}
+          value={updateChosenPlan}
           onChange={planUpdateFn}
         >
           <option defaultValue value />
