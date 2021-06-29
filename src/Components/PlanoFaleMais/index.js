@@ -1,30 +1,30 @@
 import React from "react";
 import { FaleMais } from "./styles";
-import { PlanosDiv } from "./styles";
-const PlanoFaleMais = ({ planUpdateFn, planoEscolhido: updateChosenPlan }) => {
+import { DivPlans } from "./styles";
+const PlanoFaleMais = ({ planUpdateFn, updateChosenPlan }) => {
   return (
     <>
-      <PlanosDiv>
-        <label className="label-plano" data-testid="label-plano">
+      <DivPlans>
+        <label className="label-plan" data-testid="label-plan">
           Conheça os Incríveis Planos FaleMais:{" "}
         </label>
         <FaleMais
-          data-testid="select-plano"
+          data-testid="select-plan"
           value={updateChosenPlan}
           onChange={planUpdateFn}
         >
           <option defaultValue value />
-          <option id="FaleMais30" data-testid="select-option-plano">
+          <option id="FaleMais30" data-testid="select-option-plan">
             FaleMais 30
           </option>
-          <option id="FaleMais60" data-testid="select-option-plano">
+          <option id="FaleMais60" data-testid="select-option-plan">
             FaleMais 60
           </option>
-          <option id="FaleMais120" data-testid="select-option-plano">
+          <option id="FaleMais120" data-testid="select-option-plan">
             FaleMais 120
           </option>
         </FaleMais>
-      </PlanosDiv>
+      </DivPlans>
     </>
   );
 };

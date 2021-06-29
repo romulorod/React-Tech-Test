@@ -1,14 +1,14 @@
 .App {
   text-align: center;
 }
-.plano-minutos select{
+.plan-minutes select{
  display:flex;
  justify-content: space-evenly;
  align-content: center;
  margin-left:22%;
 }
 @media (max-width: 320px){
-.plano-minutos select {
+.plan-minutes select {
     margin-bottom: 5%;
     margin-left: 25%;
 }

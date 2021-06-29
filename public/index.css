@@ -18,7 +18,7 @@ body{
     margin-top: 10%;
     font-size: var(--textSize);
 }
-.plano-minutos{
+.plan-minutes{
     display:flex;
     justify-content:space-evenly;
     align-items: center;
@@ -27,7 +27,7 @@ body{
     top:35%;
 }
 
-#resultado{
+#result{
     display:flex;
     justify-content:space-evenly;
     align-items: center;
@@ -37,24 +37,24 @@ body{
     font-size: var(--textSize);
 }
 
-.preco-com-plano{
+.price-include-plan{
     display: block;
     align-items: center;
     justify-content: center;
     font-size: var(--textSize);
     color:green;
 }
-.preco-sem-plano{
+.price-exclude-plan{
     display: block;
     font-size: var(--textSize);
     color:red;
 }
-.preco-sem-plano p{
+.price-exclude-plan p{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.preco-com-plano p{
+.price-include-plan p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,18 +63,18 @@ body{
 
 
 @media  (max-width:320px){
-.form-div, .plano-minutos{
+.form-div, .plan-minutes{
     display:block;
     width: 90%;
     text-align: center;
     margin:10% auto;
     }
 
-#origemDDD, #destinoDDD{
+#OriginDDD, #DestinyDDD{
     display:block;
     margin: 5% 40%;
 }
-.plano-minutos{
+.plan-minutes{
     display:block;
     margin: 5% 5%;
     margin-top: -10%;
@@ -82,22 +82,22 @@ body{
     justify-content: center;
     align-items: center;
 }
-.plano-minutos select{
+.plan-minutes select{
     margin-bottom: 5%;
     margin-left: 25%;
 }
-#resultado{
+#result{
     display:block;
     margin: 15% 5%;
     width: 90%;
     text-align: center;
 }
-#resultado p{
+#result p{
     margin-bottom: 10%;
 }
 }
 @media  (min-width:321px) and (max-width:460px){
-    .form-div, .plano-minutos{
+    .form-div, .plan-minutes{
         display:block;
         width: 90%;
         text-align: center;
@@ -110,7 +110,7 @@ body{
         justify-content: center;
         align-items: center;
     }
-    .plano-minutos{
+    .plan-minutes{
         display:block;
         margin: 5% 5%;
         margin-top: -10%;
@@ -118,28 +118,28 @@ body{
         justify-content: center;
         align-items: center;
     }
-    .plano-minutos select{
+    .plan-minutes select{
         margin-left: 25%;
         margin-bottom: 5%;
     }
-    #resultado{
+    #result{
         display:block;
         margin: 15% 5%;
         width: 90%;
         text-align: center;
     }
-    #resultado p{
+    #result p{
         margin-bottom: 10%;
     }
     }
     @media (min-width:420px){
-        .plano-minutos select{
+        .plan-minutes select{
             margin-left: 30%;
             margin-bottom: 5%;
         }
     }
     @media (min-width:520px){
-        .plano-minutos select{
+        .plan-minutes select{
             margin-left: 33%;
             margin-bottom: 5%;
         }

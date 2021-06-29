@@ -1,28 +1,28 @@
 import React from "react";
 
-const SelectOrigem = ({ originUpdateFn, origem }) => {
+const SelectOrigin = ({ originUpdateFn, origin }) => {
   return (
-    <div className="origem">
+    <div className="origin">
       <form data-testid="form-origin" className="form-origin">
-        <label htmlFor="dddOrigem">De onde você fala atualmente? </label>
+        <label htmlFor="dddOrigin">De onde você fala atualmente? </label>
         <select
-          id="origemDDD"
+          id="OriginDDD"
           data-testid="select-origin"
-          name="dddO"
-          value={origem}
+          name="OriginDDD"
+          value={origin}
           onChange={originUpdateFn}
         >
           <option defaultValue value />
-          <option id="origem011" value="011" data-testid="select-option-origem">
+          <option id="origin011" value="011" data-testid="select-option-origin">
             011
           </option>
-          <option id="origem016" value="016" data-testid="select-option-origem">
+          <option id="origin016" value="016" data-testid="select-option-origin">
             016
           </option>
-          <option id="origem017" value="017" data-testid="select-option-origem">
+          <option id="origin017" value="017" data-testid="select-option-origin">
             017
           </option>
-          <option id="origem018" value="018" data-testid="select-option-origem">
+          <option id="origin018" value="018" data-testid="select-option-origin">
             018
           </option>
         </select>
@@ -31,4 +31,4 @@ const SelectOrigem = ({ originUpdateFn, origem }) => {
   );
 };
 
-export default SelectOrigem;
+export default SelectOrigin;

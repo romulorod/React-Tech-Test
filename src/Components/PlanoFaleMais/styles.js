@@ -10,7 +10,7 @@ margin-left: 20%;
 margin-top:2%;
 font-size:20px;
 `
-export const PlanosDiv = styled.div`
+export const DivPlans = styled.div`
 font-size:20px;
 display:block;
 

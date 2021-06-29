@@ -12,7 +12,7 @@ font-size:20px;
 width:40%;
 `
 
-export const MinutosMes = styled.div`
+export const MinutesMonth = styled.div`
 font-size: 20px;
     label{
         display:block;

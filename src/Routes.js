@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Simulacao from "./pages/Simulacao/";
+import Simulation from "./pages/Simulation/";
 import NotFound from "./pages/NotFound";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/simulacao">
-          <Simulacao />
+        <Route exact path="/simulation">
+          <Simulation />
         </Route>
         <Route exact path="/">
           <Home />

@@ -32,7 +32,7 @@ const Home = () => {
         sua página, com o poder do Router ;)
       </Section>
       <Button>
-        <Link to="/simulacao">Clique Aqui!</Link>
+        <Link to="/simulation">Clique Aqui!</Link>
       </Button>
     </Main>
   );
