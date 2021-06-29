@@ -4,7 +4,7 @@ const SelectDestino = ({ destinyUpdateFn, destiny, originDDD }) => {
   return (
     <div className="destino">
       <form data-testid="form-destino" className="form-destino">
-        <label htmlFor="dddDestino">Escolha o DDD de destino: </label>
+        <label htmlFor="dddDestino">Informe o DDD de destino da ligação: </label>
         <select
           id="destinoDDD"
           name="ddddestino"

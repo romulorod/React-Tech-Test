@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import SelectOrigem from "../../components/SelectOrigem";
-import SelectDestino from "../../components/SelectDestino";
-import MinutosPorMes from "../../components/MinutosPorMes";
-import PlanoFaleMais from "../../components/PlanoFaleMais";
+import SelectOrigem from "../../Components/SelectOrigem";
+import SelectDestino from "../../Components/SelectDestino";
+import MinutosPorMes from "../../Components/MinutosPorMes";
+import PlanoFaleMais from "../../Components/PlanoFaleMais";
 
 import "./styles.css";
 

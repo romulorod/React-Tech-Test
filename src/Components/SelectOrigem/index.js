@@ -4,7 +4,7 @@ const SelectOrigem = ({ originUpdateFn, origem }) => {
   return (
     <div className="origem">
       <form data-testid="form-origin" className="form-origin">
-        <label htmlFor="dddOrigem">Escolha o DDD de origem: </label>
+        <label htmlFor="dddOrigem">De onde você fala atualmente? </label>
         <select
           id="origemDDD"
           data-testid="select-origin"

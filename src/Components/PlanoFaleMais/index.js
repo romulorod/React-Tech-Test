@@ -6,7 +6,7 @@ const PlanoFaleMais = ({ planUpdateFn, planoEscolhido }) => {
     <>
       <PlanosDiv>
         <label className="label-plano" data-testid="label-plano">
-          Escolha seu Plano FaleMais:{" "}
+          Conheça os Incríveis Planos FaleMais:{" "}
         </label>
         <FaleMais
           data-testid="select-plano"
